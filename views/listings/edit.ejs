@@ -1,0 +1,84 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row ">
+    <div class="col-8 offset-2">
+    <h3>Edit Listing</h3>
+    <form method="POST" 
+    action="/listings/<%= listing._id %>?_method=PUT"
+    novalidate
+    class="needs-validation"
+    enctype="multipart/form-data">
+        <div>
+            <label for="title" class="form-label">Title</label>
+            <input 
+            id="title"
+            name="listing[title]" 
+            value = "<%=listing.title%>" 
+            type="text" 
+            placeholder="Name of the Hotel" 
+            required
+            class="form-control"/>
+            
+        </br></br>
+        </div>
+
+        <div >
+            <label for="description" class="form-label">Description</label>
+            <textarea 
+            id="description"
+            name="listing[description]" 
+            value="<%=listing.description%>"
+            placeholder="Describe" required
+            class="form-control">
+            <%=listing.description%></textarea></br></br>
+        </div>
+        <div class="mb-3">
+            Uploaded Image
+            <img src="<%=originalImageUrl%>" alt="Image Preview">
+        </div>
+        <div >
+            <label for="image" class="form-label">Image Link</label>
+            <input 
+            name="listing[image]" 
+            type="file" 
+            class="form-control"/>
+        </div>
+
+
+        <div class="row">
+        <div col-0>
+            <label for="price" class="form-label">Price</label>
+            <input
+            id="price" 
+            name="listing[price]" 
+            value = " <%=listing.price%>" 
+            type="number" 
+            placeholder="e.g 1200" required
+            class="form-control"/><br/><br/>
+        </div>
+        
+        <div col-8>
+            <label for="country" class="form-label">Country</label>
+            <input 
+            name="listing[country]" 
+            value = " <%=listing.country%>" 
+            type="text" 
+            class="form-control"/><br/><br/>
+        </div>
+    </div>
+
+        <div>
+            <label for="location" class="form-label">Location</label>
+            <input 
+            id="location"
+            class="form-control"
+            name="listing[location]" 
+            value = "<%=listing.location%>" 
+            type="text"
+            placeholder="Enter region" required
+            class="form-control"/><br/><br/>
+        </div>
+        
+        <button class="edit-btn btn btn-dark mb-3">Edit</button>
+    </form>
+</div>
+</div>

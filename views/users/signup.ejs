@@ -1,0 +1,50 @@
+<% layout("/layouts/boilerplate") %>
+    <div class="row mt-3 mb-3">
+        <h1 class="col-6 offset-2">Sign Up to Wanderlust</h1>
+        <div class="col-8 offset-2">
+            <form action="/signup" method="POST" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input 
+                    id="username"
+                    name="username" 
+                    placeholder="Enter Username" 
+                    type="text" 
+                    class="form-control"
+                    required
+                    />
+                    <div class="valid-feedback">Perfect</div>
+                    <div class="invalid-feedback">Enter Valid Username</div>
+                </div>    
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input 
+                    id="email"
+                    name="email" 
+                    placeholder="Enter Email id" 
+                    type="text" 
+                    class="form-control"
+                    required
+                    />
+                    <div class="valid-feedback">Perfect</div>
+                    <div class="invalid-feedback">Enter Valid Email</div>
+                </div> 
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">password</label>
+                    <input 
+                    id="password"
+                    name="password" 
+                    placeholder="Enter Password" 
+                    type="text" 
+                    class="form-control"
+                    required
+                    />
+                    <div class="valid-feedback">Add Uppercase, Lowercase, special characters and Numerics</div>
+                    <div class="invalid-feedback">Something went wrong</div>
+                </div> 
+                <button class="btn btn-success">Sign up</button>
+            </form>
+        </div>
+    </div>
